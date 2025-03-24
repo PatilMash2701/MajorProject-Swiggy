@@ -156,11 +156,11 @@
       });
     }
   }
-})({"hrclm":[function(require,module,exports,__globalThis) {
+})({"dt0RY":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SERVER_PORT = 64460;
+var HMR_SERVER_PORT = 49839;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "439701173a9199ea";
 var HMR_USE_SSE = false;
@@ -681,6 +681,7 @@ var _foodOptions = require("./component/FoodOptions");
 var _foodOptionsDefault = parcelHelpers.interopDefault(_foodOptions);
 var _groceryOptions = require("./component/GroceryOptions");
 var _groceryOptionsDefault = parcelHelpers.interopDefault(_groceryOptions);
+//hello
 //Header Section:Lets Build it.....
 function App() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
@@ -18849,7 +18850,7 @@ var _foodCardDefault = parcelHelpers.interopDefault(_foodCard);
 function FoodOption() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "w-[90%] container mx-auto flex flex-wrap mt-10 gap-5 ",
+            className: "w-[90%] container mx-auto flex flex-col flex-wrap  mt-10 gap-5 h-[60vh] overflow-y-scroll scrollbar-x-hidden scrollbar-y-hidden",
             children: (0, _foodDataDefault.default).map((foodData)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _foodCardDefault.default), {
                     foodData: foodData
                 }, foodData.id, false, {
@@ -19309,7 +19310,7 @@ function GroceryOption() {
                     columnNumber: 10
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "w-[90%] container mx-auto flex  mt-10 gap-5  overflow-x-auto whitespace-nowrap scrollbar-hide",
+                    className: "w-[90%] container mx-auto flex  mt-10 gap-5  overflow-x-auto  scrollbar-hide",
                     children: (0, _groceryGridCardDefault.default).map((grocery)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _groceryCardDefault.default), {
                             grocery: grocery
                         }, grocery.id, false, {
@@ -19719,39 +19720,40 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 function GroceryCard({ grocery }) {
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _jsxDevRuntime.Fragment), {
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "flex flex-wrap w-80 h-150 object-cover",
-            children: [
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                    href: grocery?.action?.link,
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        className: "w-80 h-140 object-cover",
-                        src: "https://media-assets.swiggy.com/swiggy/image/upload/" + grocery?.imageId
-                    }, void 0, false, {
-                        fileName: "src/component/GroceryCard.js",
-                        lineNumber: 8,
-                        columnNumber: 9
-                    }, this)
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: " flex flex-col items-center",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                href: grocery?.action?.link,
+                className: "w-full",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                    className: "w-50 h-50 object-cover rounded-2xl bg-white",
+                    src: "https://media-assets.swiggy.com/swiggy/image/upload/" + grocery?.imageId,
+                    alt: "Grocery"
                 }, void 0, false, {
                     fileName: "src/component/GroceryCard.js",
-                    lineNumber: 7,
-                    columnNumber: 9
-                }, this),
-                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                    children: grocery?.action?.text
-                }, void 0, false, {
-                    fileName: "src/component/GroceryCard.js",
-                    lineNumber: 10,
-                    columnNumber: 8
+                    lineNumber: 5,
+                    columnNumber: 17
                 }, this)
-            ]
-        }, void 0, true, {
-            fileName: "src/component/GroceryCard.js",
-            lineNumber: 6,
-            columnNumber: 9
-        }, this)
-    }, void 0, false);
+            }, void 0, false, {
+                fileName: "src/component/GroceryCard.js",
+                lineNumber: 4,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                className: "text-center mt-2 w-50",
+                children: grocery?.action?.text
+            }, void 0, false, {
+                fileName: "src/component/GroceryCard.js",
+                lineNumber: 11,
+                columnNumber: 13
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/component/GroceryCard.js",
+        lineNumber: 3,
+        columnNumber: 9
+    }, this);
 }
 _c = GroceryCard;
 exports.default = GroceryCard;
@@ -19763,6 +19765,6 @@ $RefreshReg$(_c, "GroceryCard");
   globalThis.$RefreshReg$ = prevRefreshReg;
   globalThis.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}]},["hrclm","hh6uc"], "hh6uc", "parcelRequire94c2", null, null, "http://localhost:64460")
+},{"react/jsx-dev-runtime":"dVPUn","@parcel/transformer-js/src/esmodule-helpers.js":"jnFvT","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"7h6Pi"}]},["dt0RY","hh6uc"], "hh6uc", "parcelRequire94c2", null, null, "http://localhost:49839")
 
 //# sourceMappingURL=zzSwiggy.2c54e4d8.js.map
