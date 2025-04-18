@@ -1,8 +1,14 @@
 import React,{useState} from 'react';
 import ReactDOM from "react-dom/client";
-import Header from './component/Header';
-import FoodOption from './component/FoodOptions';
-import GroceryOption from './component/GroceryOptions';
+import Home from './component/Home';
+import Restaurant from './component/Restaurant';
+import {BrowserRouter,Routes,Route} from 'react-router';
+import RestaurantMenu from './component/RestaurantMenu';
+import SearchFood from './component/SearchFood';
+import SecondaryHome from './component/SecondaryHome';
+import store from './stored/stores';
+import { Provider } from 'react-redux';
+import Checkout from './component/Checkout';
 //hello
 
 
@@ -10,11 +16,23 @@ import GroceryOption from './component/GroceryOptions';
 function App(){
      return(
         <>
-        <Header></Header>
-        <FoodOption></FoodOption>
-        <GroceryOption></GroceryOption>
+        <Provider store={store}>
+        <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<Home></Home>}></Route>
+            <Route element={<SecondaryHome></SecondaryHome>}>
+            <Route path="/restaurant" element={<Restaurant></Restaurant>}></Route>
+            <Route path="/city/delhi/:id" element={<RestaurantMenu></RestaurantMenu>}></Route>
+            <Route path="/city/delhi/:id/search" element={<SearchFood></SearchFood>}></Route>
+            </Route>
+            <Route path="/Checkout" element={<Checkout></Checkout>}></Route>
+        </Routes>
+        </BrowserRouter>
+        </Provider>
         </>
      )
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App></App>)
+ReactDOM.createRoot(document.getElementById('root')).render(<App></App>);
+
+//Proxy Server:"https://cors-anywhere.herokuapp.com/"
