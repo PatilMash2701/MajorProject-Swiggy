@@ -7,7 +7,6 @@ build/
 
 # misc
 .DS_Store
-*.log
 
 # parcel
 .parcel-cache/
@@ -15,4 +14,3 @@ build/
 
 # IDE
 .idea/
-.vscode/
