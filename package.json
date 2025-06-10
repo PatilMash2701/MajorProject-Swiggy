@@ -1,4 +1,12 @@
 {
+  "name": "zzswiggy",
+  "version": "1.0.0",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
     "@reduxjs/toolkit": "^2.6.1",
     "@tailwindcss/postcss": "^4.0.15",
