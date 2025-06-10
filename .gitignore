@@ -1,6 +1,18 @@
+# dependencies
 node_modules/
-.parcel-cache/
+
+# production
 dist/
 build/
+
+# misc
 .DS_Store
 *.log
+
+# parcel
+.parcel-cache/
+.parcel-cache/**/*
+
+# IDE
+.idea/
+.vscode/
